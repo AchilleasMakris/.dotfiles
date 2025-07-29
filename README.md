@@ -4,17 +4,39 @@ Personal Hyprland configuration files managed with GNU Stow.
 
 ## What's Included
 
+### Core Hyprland Ecosystem
 - **hypr**: Hyprland window manager configuration
+- **hyprlock**: Screen locker for Hyprland 
+- **hyprpaper**: Wallpaper daemon for Hyprland
 - **waybar**: Status bar for Wayland
+- **wofi**: Application launcher for Wayland
+- **swaync**: Notification daemon for Wayland
+
+### Terminal & Applications
 - **kitty**: Terminal emulator configuration
-- **rofi**: Application launcher
+- **rofi**: Application launcher (X11 fallback)
+
+### Theming & Appearance
+- **gtk**: GTK3/GTK4 theme configuration
+- **qt-theme**: Qt5/Qt6 theme configuration (qt5ct, qt6ct, Kvantum)
+- **wallust**: Dynamic wallpaper-based theming
 
 ## Prerequisites
 
 Install required packages on Arch Linux:
 
 ```bash
-sudo pacman -S hyprland waybar kitty rofi stow
+# Core Hyprland ecosystem
+sudo pacman -S hyprland hyprlock hyprpaper waybar wofi swaync
+
+# Terminal and applications
+sudo pacman -S kitty rofi
+
+# Theming and appearance
+sudo pacman -S gtk3 gtk4 qt5ct qt6ct kvantum wallust
+
+# Dotfiles management
+sudo pacman -S stow
 ```
 
 ## Installation
